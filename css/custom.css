@@ -1,26 +1,4 @@
-body {
-    background-color: black;
-}
-
-.quiz_nerd {
-    font-size: 75px;
-    font-weight: bold;
-    margin-left: 155px;
-    margin-top: 295px;
-}
-
-.yellowQuiz{
-    color: #f1ff0a;
-}
-
-.whiteQuiz {
-    color: #ffffff;
-}
-
-.divLeft{
-    background-color: black;
-    color: white;
-}
+/* TELA INDEX */
 
 * {
     margin: 0;
@@ -29,37 +7,103 @@ body {
     font-family: 'Poppins', sans-serif; 
 }
 
+.quiz_nerd {
+    font-size: 75px;
+    font-weight: 100;
 
-.yeloowQuizBack{
-    background-color: #f1ff0a;
-}
-
-.row {
-    width: 1440px;
-    height: 100%;
-    background-color: black;
 }
 
 .bem_vindo {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 20px;
     color:white;
 }
 
-.btn .yeloowQuizBack {
-    width: 215px;
-    height:60px;
-    background: #F1FF0A;
-    border-radius: 15px;
+.yellowQuiz{
+    color: #f1ff0a;
 }
 
+#divLeft{
+    float: left;
+    background-color: #121212;
+    color: white;
+    padding: 10% 0 10% 2%;
+    text-align: center;
+    width: 50%;
+    height: 100vh;
+}
 
+#divRight{
+    float: left;
+    background-color: #f5f5f5;
+    padding: 10% 0 10% 2%;
+    text-align: center;
+    width: 50%;
+    height: 100vh;
+}
 
+#footHome{
+    padding-top: 25%;
+}
 
+.playerName{
+    padding: 15px 0 15px 20px;
+    border-radius: 15px;
+    width: 80%;
+    font-size: 14px;
+}
 
+.start{
+    margin-top: 4%;
+    padding: 5px 15px;
+    border-radius: 15px;
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.yeloowQuizBack{
+    background-color: #f1ff0a;
+}
+.yeloowQuizBack:hover {
+    cursor: pointer;
+}
+
+/* TELA QUESTION */
+#container{
+    padding: 10vh;
+    background-color: #121212;
+    height: 100vh;
+}
+
+#header{
+    background-color: #f5f5f5;
+    height: 80vh;
+}
+
+#header h1{
+    padding: 20px 0 10px 50px;
+    display: inline;
+    float: left;
+    font-size: 60px;
+}
 
 .backgroundClock {
-    background-image: url("img/Logo_Quiz_Nerd.svg");
-    width: 150px;
+    margin-left: 20%;
+    display: inline;
+    float: left;
+    background-image: url("../img/Clock_Quiz_Nerd.svg");
+    background-repeat: repeat;
+    width: 300px;
     height: 150px;
+}
+
+.avatar{
+    float: left;
+    width: 30px;
+}
+
+#usuário{
+    font-size: 20px;
+    padding-left: 5px;
 }
