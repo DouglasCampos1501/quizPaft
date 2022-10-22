@@ -1,3 +1,65 @@
+body {
+    background-color: black;
+}
+
+.quiz_nerd {
+    font-size: 75px;
+    font-weight: bold;
+    margin-left: 155px;
+    margin-top: 295px;
+}
+
 .yellowQuiz{
     color: #f1ff0a;
+}
+
+.whiteQuiz {
+    color: #ffffff;
+}
+
+.divLeft{
+    background-color: black;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+.yeloowQuizBack{
+    background-color: #f1ff0a;
+}
+
+.row {
+    width: 1440px;
+    height: 100%;
+    background-color: black;
+}
+
+.bem_vindo {
+    font-weight: 400;
+    font-size: 24px;
+    color:white;
+}
+
+.btn .yeloowQuizBack {
+    width: 215px;
+    height:60px;
+    background: #F1FF0A;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+.backgroundClock {
+    background-image: url("img/Logo_Quiz_Nerd.svg");
+    width: 150px;
+    height: 150px;
 }
