@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 
-<body>
+<body onload="save()" onunload="save()">
     <div class="container">
         <main>
             <div id="divLeft">
@@ -21,7 +21,10 @@
                 <br>
                 <input class="playerName" type="text" placeholder="Digite o seu nome">
                 <br><br>
-                <a href="question.html"><button class="yeloowQuizBack start">INICIAR</button></a>
+                <a href="question.html">
+                    <button class="yeloowQuizBack start">INICIAR</button>
+                    <span id="userHidden" style="display: none"> </span>
+                </a>
                 <br>
                 <p id="footHome"><small>Orgulhosamente desenvolvido por: Alexandre, Douglas e Rafael</small></p>
             </div>
@@ -31,6 +34,6 @@
             </div>
         </main>
     </div>
-    <script src='js/main.js'></script>
+    <script type="text/javascript" src='js/main.js'></script>
 </body>
 </html>

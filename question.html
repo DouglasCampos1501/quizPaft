@@ -10,24 +10,49 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
 </head>
 
-<body>
+<body onload="load()">
     <div id="container">
         <div id="center">
             <div id="header">
                 <h1>Quiz<span class="yellowQuiz">Nerd</span></h1>
                     <p class="backgroundClock">60</p>
-                <p><img src="img/Avatar_Nerd.svg" class="avatar"><span id="usuário">Nome</span></p>
+                <p class="avatar_nome"><img src="img/Avatar_Nerd.svg" class="avatar"><span id="usuário">Nome</span></p>
             </div>
-            <div id="picsQuestion">
-                <img src="img/Logo_Quiz_Nerd.svg">
-            </div>
-            <div id="divQuestion">
-                <p id="question">Pergunta</p>
-                <p id="answer1"></p>
-                <p id="answer2"></p>
-                <p id="answer3"></p>
-                <p id="answer4"></p>
-            </div>
+            <!-- <div class="wrapple">
+                <div id="picsQuestion">
+                    <img src="img/Logo_Quiz_Nerd.svg">
+                </div>
+                <div id="divQuestion">
+                    <p id="question">Em Stranger Things, quem é o personagem que dá o nome de Demogorgon, como um bicho de estimação?</p>
+                    <p id="answer1">Mike</p>
+                    <p id="answer2">Dustin</p>
+                    <p id="answer3">Will</p>
+                    <p id="answer4">Eleven</p>
+                </div>
+            </div> -->
+
+            <article class='centro' id='instrucoes'>
+                Leia a questão e clique na resposta correta
+            </article>
+            
+            <article class='questoes'>
+                
+                <header class='questao'>
+                    <span id='numQuestao'></span>
+                    <h2 id='pergunta'></h2>
+                </header>
+
+                <div class='corpo'>
+                    <ol type='A' id='alternativas'>
+                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                    </ol>
+                </div>
+            </article>
+            
+            <article id='aviso'>Questão <span id='numero'></span> de <span id='total'></span></article>
         </div>
     </div>
     <script src='js/main.js'></script>
