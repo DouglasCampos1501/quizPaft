@@ -212,12 +212,12 @@ function verificarSeAcertou(nQuestao, resposta) {
     //console.log("RespC " + certa)
 
     if(respostaEscolhida == certa) {
-        //console.log("Acertou")
-        //respostaEsta.textContent = "Correta 😊"
-        pontos += 10 // pontos = pontos + 10
+        console.log("Acertou")
+        respostaEsta.textContent = "Correta 😊"
+        pontos += 1 // pontos = pontos + 10
     } else {
-        //console.log("Errou!")
-        //respostaEsta.textContent = "Errada 😢"
+        console.log("Errou!")
+        respostaEsta.textContent = "Errada 😢"
     }
 
     // atualizar placar
@@ -232,7 +232,9 @@ function verificarSeAcertou(nQuestao, resposta) {
         proxima = numeroDaQuestao+1
 
         if(proxima > totalDeQuestoes) {
-            console.log('Fim do Jogo!')
+            //console.log('Fim do Jogo!')
+            window.location.href = "result.html";
+
             fimDoJogo()
         } else {
             proximaQuestao(proxima)
