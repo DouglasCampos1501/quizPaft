@@ -212,12 +212,12 @@ function verificarSeAcertou(nQuestao, resposta) {
     //console.log("RespC " + certa)
 
     if(respostaEscolhida == certa) {
-        console.log("Acertou")
-        respostaEsta.textContent = "Correta 😊"
+        //console.log("Acertou")
+        //respostaEsta.textContent = "Correta 😊"
         pontos += 1 // pontos = pontos + 10
     } else {
-        console.log("Errou!")
-        respostaEsta.textContent = "Errada 😢"
+        //console.log("Errou!")
+        //respostaEsta.textContent = "Errada 😢"
     }
 
     // atualizar placar
