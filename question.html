@@ -8,52 +8,44 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 
 <body onload="load()">
     <div id="container">
-        <div id="center">
+        <div id="backGroud">
             <div id="header">
                 <h1>Quiz<span class="yellowQuiz">Nerd</span></h1>
-                    <p class="backgroundClock">60</p>
+                <p id="clock">60</p>
                 <p class="avatar_nome"><img src="img/Avatar_Nerd.svg" class="avatar"><span id="usuário">Nome</span></p>
+                <br>
+                <article class='centro' id='instrucoes'>
+                    <small>Leia a questão e clique na resposta correta</small>
+                </article>
             </div>
-            <!-- <div class="wrapple">
-                <div id="picsQuestion">
-                    <img src="img/Logo_Quiz_Nerd.svg">
-                </div>
-                <div id="divQuestion">
-                    <p id="question">Em Stranger Things, quem é o personagem que dá o nome de Demogorgon, como um bicho de estimação?</p>
-                    <p id="answer1">Mike</p>
-                    <p id="answer2">Dustin</p>
-                    <p id="answer3">Will</p>
-                    <p id="answer4">Eleven</p>
-                </div>
-            </div> -->
-            <br>
-
-            <article class='centro' id='instrucoes'>
-                <small>Leia a questão e clique na resposta correta</small>
-            </article>
-            
-            <article class='questoes'>
-                
-                <header class='questao'>
-                    <h3 style="text-align: center ;"><span id='numQuestao'></span></h3>
-                    <h3 id='pergunta'></h3>
-                </header>
-
-                <div class='corpo'>
-                    <ol type='A' id='alternativas'>
-                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                    </ol>
-                </div>
-            </article>
-            
-            <article class='centro' id='aviso'>Questão <span id='numero'></span> de <span id='total'></span></article>
+            <div id="leftSide">
+                <img id="imgQuest" src="img/quest01.png">
+            </div>
+            <div id="rightSide">
+                <article class='questoes'>
+                    <header class='questao'>
+                        <h3 style="text-align: center ;"><small>Questão n.º <span id='numQuestao'></span> de 10</small></h3><br>
+                        <h4 id='pergunta'></h4>
+                    </header>
+                    <div class='corpo'>
+                        <ol type='A' id='alternativas'>
+                            <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                            <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                            <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                            <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        </ol>
+                    </div>
+                </article>
+                <article class='centro' id='aviso'>
+                    Questão <span id='numero'></span> de <span id='total'></span>
+                </article>
+                <br><br>
+            </div>
         </div>
     </div>
     <script src='js/main.js'></script>
