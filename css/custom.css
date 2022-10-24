@@ -90,13 +90,11 @@
 
 .backgroundClock {
     margin-left: 20%;
-    display: inline;
-    float: left;
+    display: inline-block;
     background-image: url("../img/Clock_Quiz_Nerd.svg");
     background-repeat: no-repeat;
-    padding-top: 55px;
-    width: 300px;
-    height: 150px;
+    width: 20%;
+    height: 20%;
 }
 
 .avatar{
@@ -149,3 +147,8 @@
 .bloqueado li:hover {
     display: none;
 } 
+
+.centro{
+    align-items: center;
+    text-align: center;
+}
