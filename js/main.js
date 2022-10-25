@@ -1,6 +1,11 @@
 let botaoInicial = document.querySelector('.yeloowQuizBack');
 let userHidden = document.querySelector('#userHidden');
 
+// AUDIO
+let somAcerto   = document.querySelector('#som_tecla_pom')
+let somErro     = document.querySelector('#som_tecla_clap')
+let somAplausos = document.querySelector('#som_tecla_tim')
+
 
 function save(){
     let valorDoNome = document.querySelector('.playerName').value;
@@ -212,12 +217,10 @@ function verificarSeAcertou(nQuestao, resposta) {
     //console.log("RespC " + certa)
 
     if(respostaEscolhida == certa) {
-        //console.log("Acertou")
-        //respostaEsta.textContent = "Correta 😊"
-        pontos += 1 // pontos = pontos + 10
+        somAcerto.play()
+        pontos += 1 
     } else {
-        //console.log("Errou!")
-        //respostaEsta.textContent = "Errada 😢"
+        somErro.play()
     }
 
     // atualizar placar
@@ -239,11 +242,12 @@ function verificarSeAcertou(nQuestao, resposta) {
         } else {
             proximaQuestao(proxima)
         }
-    }, 250)
+    }, 500)
     desbloquearAlternativas()
 }
 
 function fimDoJogo() {
+    somAplausos.play()
     instrucoes.textContent = "Fim de Jogo!"
     numQuestao.textContent = ""
 
