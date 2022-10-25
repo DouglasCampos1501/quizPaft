@@ -34,6 +34,45 @@
             <button id="refresh">REINICIAR</button>
         </div>
     </div>
-    <script src='main.js'></script>
+
+
+
+    <div id="container">
+        <div id="backGroud">
+            <div id="header">
+                <h1>Quiz<span class="yellowQuiz">Nerd</span></h1>
+                <br>
+            </div>
+            <div id="leftSide">
+                <!-- 
+                    De 0 a 4 FRACO - questFraco.png
+                    De 5 a 8 Normal - questNormal.png
+                    De 9 a 10 Ótimo - questForte.png
+                -->
+                <img id="imgPunct" style="align-items: center;" src="img/questFraco.png">
+            </div>
+            <div id="rightSide">
+                <article class='pontuacao'>
+                    <header>
+                        <h3 style="text-align: center ;">PONTUAÇÃO</h3><br>
+                    </header>
+                    <div>
+                        <ol type='P'>
+                            <li id='pontA' value='1PA'> Rodrigo - 10 pts</li>
+                            <li id='pontB' value='1PB'> Alexandre - 9 pts</li>
+                            <li id='pontC' value='1PC'> Marcela - 6 pts</li>
+                            <li id='PontD' value='1PD'> Andreia - 5 pts</li>
+                            <li id='PontE' value='1PE'> Andre - 4 pts</li>
+                        </ol>
+                    </div>
+                </article>
+                <div>
+                    <button class='pontuacao'>REINICIAR</button>   
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <script src='js/main.js'></script>
 </body>
 </html>
