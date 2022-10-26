@@ -9,13 +9,14 @@ let somAplausos = document.querySelector('#som_tecla_tim')
 
 function save(){
     let valorDoNome = document.querySelector('.playerName').value;
-    window.localStorage.setItem('userName', valorDoNome);
+     ('userName', valorDoNome);
 }
 function load(){
-    let usuario = document.querySelector('#usuário');
+    let usuario = document.querySelector('#usuario');
     let nome = window.localStorage.getItem('userName');
     usuario.textContent = nome;
 }
+
 function erase(){
     window.localStorage.removeItem('userName');
 }
@@ -219,36 +220,18 @@ function verificarSeAcertou(nQuestao, resposta) {
     console.log(nQuestao.id,resposta.id)
     if(respostaEscolhida == certa) {
         somAcerto.play();
-        pontos += 1 
+        pontos += 1;
         document.getElementById(nQuestao.id).style.backgroundColor="#00FF00";
         setTimeout(function() {
             document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";
-    
-            if(proxima > totalDeQuestoes) {
-                //console.log('Fim do Jogo!')
-                window.location.href = "result.html";
-    
-                fimDoJogo()
-            } else {
-                proximaQuestao(proxima)
-            }
         }, 2000)
 
 
     } else {
         somErro.play();
-        document.getElementById(nQuestao.id).style.backgroundColor="#DC143C	";
+        document.getElementById(nQuestao.id).style.backgroundColor="#DC143C";
         setTimeout(function() {
-            document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";
-    
-            if(proxima > totalDeQuestoes) {
-                //console.log('Fim do Jogo!')
-                window.location.href = "result.html";
-    
-                fimDoJogo()
-            } else {
-                proximaQuestao(proxima)
-            }
+            document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";    
         }, 2000)
 
     }
