@@ -205,20 +205,6 @@ function proximaQuestao(nQuestao) {
     imagem.src =  questoes[nQuestao].image
 }
 
-function bloquearAlternativas() {
-    a.classList.add('bloqueado')
-    b.classList.add('bloqueado')
-    c.classList.add('bloqueado')
-    d.classList.add('bloqueado')
-}
-
-function desbloquearAlternativas() {
-    a.classList.remove('bloqueado')
-    b.classList.remove('bloqueado')
-    c.classList.remove('bloqueado')
-    d.classList.remove('bloqueado')
-}
-
 function verificarSeAcertou(nQuestao, resposta) {
 
     let numeroDaQuestao = nQuestao.value
@@ -229,20 +215,50 @@ function verificarSeAcertou(nQuestao, resposta) {
     
     if(respostaEscolhida == certa) {
         somAcerto.play();
+        desabitar();
         pontos += 1;
         document.getElementById(nQuestao.id).style.backgroundColor="#00FF00";
         setTimeout(function() {
             document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";
-        }, 2000)
-
+            habilitar();
+        }, 2000);
 
     } else {
         somErro.play();
+        desabitar();
         document.getElementById(nQuestao.id).style.backgroundColor="#DC143C";
         setTimeout(function() {
             document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";    
-        }, 2000)
+            habilitar();
+        }, 2000);
+    }
 
+    function desabitar() {
+        var elem = document.getElementById("a");
+        elem.classList.add("disableView"); 
+
+        var elem = document.getElementById("b");
+        elem.classList.add("disableView"); 
+
+        var elem = document.getElementById("c");
+        elem.classList.add("disableView"); 
+
+        var elem = document.getElementById("d");
+        elem.classList.add("disableView"); 
+    }
+
+    function habilitar() {
+        var elem = document.getElementById("a");
+        elem.classList.remove("disableView"); 
+
+        var elem = document.getElementById("b");
+        elem.classList.remove("disableView"); 
+
+        var elem = document.getElementById("c");
+        elem.classList.remove("disableView"); 
+
+        var elem = document.getElementById("d");
+        elem.classList.remove("disableView"); 
     }
 
     // atualizar placar
