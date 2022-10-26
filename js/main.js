@@ -27,6 +27,7 @@ let placar = 0 // placar
 // PERGUNTA
 let numQuestao = document.querySelector('#numQuestao')
 let pergunta   = document.querySelector('#pergunta')
+let imagem = document.querySelector('#imgQuest')
 
 // ALTERNATIVAS
 let a = document.querySelector('#a')
@@ -47,6 +48,7 @@ const q0 = {
     alternativaC : "Alternativa C",
     alternativaD : "Alternativa D",
     correta      : "0",
+    imagem       : "img/quest01.png",
 }
 
 const q1 = {
@@ -57,6 +59,7 @@ const q1 = {
     alternativaC : "Will",
     alternativaD : "Eleven",
     correta      : "Dustin",
+    image        : "img/quest01.png",
 }
 
 const q2 = {
@@ -67,6 +70,7 @@ const q2 = {
     alternativaC : "Bandeiras Mundiais",
     alternativaD : "Diversão com bandeiras",
     correta      : "Diversão com bandeiras",
+    image        : "img/quest02.png",
 }
 
 const q3 = {
@@ -77,6 +81,7 @@ const q3 = {
     alternativaC : "FN-9854",
     alternativaD : "FN-2832",
     correta      : "FN-2187",
+    image        : "img/quest03.png",
 }
 
 const q4 = {
@@ -87,6 +92,7 @@ const q4 = {
     alternativaC : "Uma lata de cerveja",
     alternativaD : "Um refrigerante",
     correta      : "Uma lata de cerveja",
+    image        : "img/quest04.png",
 }
 
 const q5 = {
@@ -97,6 +103,7 @@ const q5 = {
     alternativaC : "Tank",
     alternativaD : "Cypher",
     correta      : "Cypher",
+    image        : "img/quest05.png",
 }
 
 const q6 = {
@@ -107,6 +114,7 @@ const q6 = {
     alternativaC : "Gandalf",
     alternativaD : "Khamul",
     correta      : "Khamul",
+    image        : "img/quest06.png",
 }
 
 const q7 = {
@@ -117,6 +125,7 @@ const q7 = {
     alternativaC : "Ho-oH",
     alternativaD : "Metapod",
     correta      : "Ho-oH",
+    image        : "img/quest07.png",
 }
 
 const q8 = {
@@ -127,6 +136,7 @@ const q8 = {
     alternativaC : "Deysy e Charlie",
     alternativaD : "Billy e Tommy",
     correta      : "Billy e Tommy",
+    image        : "img/quest08.png",
 }
 
 const q9 = {
@@ -137,6 +147,7 @@ const q9 = {
     alternativaC : "Rainha Vitória",
     alternativaD : "The Curator",
     correta      : "Rainha Vitória",
+    image        : "img/quest09.png",
 }
 
 
@@ -148,6 +159,7 @@ const q10 = {
     alternativaC : "Vinho",
     alternativaD : "Roxo",
     correta      : "Vinho",
+    image        : "img/quest10.png",
 }
 
 // CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
@@ -190,6 +202,7 @@ function proximaQuestao(nQuestao) {
     b.setAttribute('value', nQuestao+'B')
     c.setAttribute('value', nQuestao+'C')
     d.setAttribute('value', nQuestao+'D')
+    imagem.src =  questoes[nQuestao].image
 }
 
 function bloquearAlternativas() {
