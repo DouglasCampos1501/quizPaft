@@ -211,16 +211,46 @@ function verificarSeAcertou(nQuestao, resposta) {
     console.log("Questão " + numeroDaQuestao)
 
     let respostaEscolhida = resposta.textContent
-    //console.log("RespU " + respostaEscolhida)
+    console.log("RespU " + respostaEscolhida)
 
     let certa = questoes[numeroDaQuestao].correta
-    //console.log("RespC " + certa)
+    console.log("RespC " + certa)
 
+    console.log(nQuestao.id,resposta.id)
     if(respostaEscolhida == certa) {
-        somAcerto.play()
+        somAcerto.play();
         pontos += 1 
+        document.getElementById(nQuestao.id).style.backgroundColor="#00FF00";
+        setTimeout(function() {
+            document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";
+    
+            if(proxima > totalDeQuestoes) {
+                //console.log('Fim do Jogo!')
+                window.location.href = "result.html";
+    
+                fimDoJogo()
+            } else {
+                proximaQuestao(proxima)
+            }
+        }, 2000)
+
+
     } else {
-        somErro.play()
+        somErro.play();
+        document.getElementById(nQuestao.id).style.backgroundColor="#DC143C	";
+        setTimeout(function() {
+            document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";
+    
+            if(proxima > totalDeQuestoes) {
+                //console.log('Fim do Jogo!')
+                window.location.href = "result.html";
+    
+                fimDoJogo()
+            } else {
+                proximaQuestao(proxima)
+            }
+        }, 2000)
+
     }
 
     // atualizar placar
@@ -242,7 +272,7 @@ function verificarSeAcertou(nQuestao, resposta) {
         } else {
             proximaQuestao(proxima)
         }
-    }, 500)
+    }, 2000)
     desbloquearAlternativas()
 }
 
