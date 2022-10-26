@@ -160,7 +160,7 @@ let total  = document.querySelector('#total')
 numero.textContent = q1.numQuestao
 
 let totalDeQuestoes = (questoes.length)-1
-console.log("Total de questões " + totalDeQuestoes)
+
 total.textContent = totalDeQuestoes
 
 // MONTAR A 1a QUESTAO COMPLETA, para iniciar o Quiz
@@ -209,15 +209,11 @@ function desbloquearAlternativas() {
 function verificarSeAcertou(nQuestao, resposta) {
 
     let numeroDaQuestao = nQuestao.value
-    console.log("Questão " + numeroDaQuestao)
-
+    
     let respostaEscolhida = resposta.textContent
-    console.log("RespU " + respostaEscolhida)
-
+    
     let certa = questoes[numeroDaQuestao].correta
-    console.log("RespC " + certa)
-
-    console.log(nQuestao.id,resposta.id)
+    
     if(respostaEscolhida == certa) {
         somAcerto.play();
         pontos += 1;
@@ -248,7 +244,7 @@ function verificarSeAcertou(nQuestao, resposta) {
         proxima = numeroDaQuestao+1
 
         if(proxima > totalDeQuestoes) {
-            //console.log('Fim do Jogo!')
+
             window.location.href = "result.html";
 
             fimDoJogo()
@@ -270,7 +266,7 @@ function fimDoJogo() {
     pergunta.textContent   = "Você conseguiu " + pontos + " " + pont
 
     aviso.textContent = "Você conseguiu " + pontos + " " + pont
-
+    
     a.textContent = ""
     b.textContent = ""
     c.textContent = ""
