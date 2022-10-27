@@ -205,6 +205,20 @@ function proximaQuestao(nQuestao) {
     imagem.src =  questoes[nQuestao].image
 }
 
+function bloquearAlternativas() {
+    a.classList.add('bloqueado')
+    b.classList.add('bloqueado')
+    c.classList.add('bloqueado')
+    d.classList.add('bloqueado')
+}
+
+function desbloquearAlternativas() {
+    a.classList.remove('bloqueado')
+    b.classList.remove('bloqueado')
+    c.classList.remove('bloqueado')
+    d.classList.remove('bloqueado')
+}
+
 function verificarSeAcertou(nQuestao, resposta) {
 
     let numeroDaQuestao = nQuestao.value
