@@ -227,11 +227,17 @@ function verificarSeAcertou(nQuestao, resposta) {
     
     let certa = questoes[numeroDaQuestao].correta
     
+    let a = document.querySelector('#a')
+    let b = document.querySelector('#b')
+    let c = document.querySelector('#c')
+    let d = document.querySelector('#d')
+
     if(respostaEscolhida == certa) {
         somAcerto.play();
         desabitar();
         pontos += 1;
         document.getElementById(nQuestao.id).style.backgroundColor="#00FF00";
+        
         setTimeout(function() {
             document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";
             habilitar();
@@ -241,8 +247,21 @@ function verificarSeAcertou(nQuestao, resposta) {
         somErro.play();
         desabitar();
         document.getElementById(nQuestao.id).style.backgroundColor="#DC143C";
+                
+        if (a.textContent == certa)
+        document.getElementById(a.id).style.backgroundColor="#00FF00";
+        if (b.textContent == certa)
+        document.getElementById(b.id).style.backgroundColor="#00FF00";
+        if (c.textContent == certa)
+        document.getElementById(c.id).style.backgroundColor="#00FF00";
+        if (d.textContent == certa)
+        document.getElementById(d.id).style.backgroundColor="#00FF00";
         setTimeout(function() {
-            document.getElementById(nQuestao.id).style.backgroundColor="#f5f5f5";    
+            document.getElementById(a.id).style.backgroundColor="#f5f5f5";    
+            document.getElementById(b.id).style.backgroundColor="#f5f5f5";   
+            document.getElementById(c.id).style.backgroundColor="#f5f5f5";   
+            document.getElementById(d.id).style.backgroundColor="#f5f5f5";   
+            
             habilitar();
         }, 2000);
     }
