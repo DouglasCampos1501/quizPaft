@@ -74,6 +74,7 @@
     padding: 10vh;
     background-color: #121212;
     height: 100vh;
+
 }
 
 #center{
@@ -115,7 +116,7 @@
     width: 200px;
     height: 500px;
 }
-
+ 
 .wrapple {
     display: flex;
     justify-content: space-between;
