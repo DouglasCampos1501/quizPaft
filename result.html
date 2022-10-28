@@ -7,31 +7,48 @@
     <title>QuizNerd - O Quiz do PAFT</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='css/custom.css'>
-    <script src='main.js'></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    
 </head>
 
 <body>
-    <div>
-        <div id="header">
-            <h1>Quiz<span class="yellowQuiz">Nerd</span></h1>
-        </div>
-        <div id="picsScore">
-            <p id="scoreUser">200 pts</p>
-            <img src="img/Logo_Quiz_Nerd.svg">
-            <p id="message">Você é muito NERD</p>
-        </div>
-        <div id="divScore">
-            <p>PONTUAÇÃO</p>
-            <button id="rank1">400pts - Ruan Medeiros</button>
-            <button id="rank2">395pts - Joao das Covas</button>
-            <button id="rank3">380pts - Maria das Pedras</button>
-            <button id="rank4">375pts - Perdidos da Silva</button>
-            <button id="rank5">360pts - Lerdo Perdido</button>
-            <button id="refresh">REINICIAR</button>
+    <div id="container">
+        <div id="backGroud">
+            <div id="header">
+                <h1>Quiz<span class="yellowQuiz">Nerd</span></h1>
+                <br>
+            </div>
+            <div id="leftSide">
+                <!-- 
+                    De 0 a 4 FRACO - questFraco.png
+                    De 5 a 8 Normal - questNormal.png
+                    De 9 a 10 Ótimo - questForte.png
+                -->
+                <img id="imgPunct" style="align-items: center;" src="img/questFraco.png">
+            </div>
+            <div id="rightSide">
+                <article class='pontuacao'>
+                    <header>
+                        <h2 style="text-align: center ;">PONTUAÇÃO</h2><br>
+                    </header>
+                    <div>
+                        <ol type='P'>
+                            <li id='pontA' value='1PA'> Rodrigo - 10 pts</li>
+                            <li id='pontB' value='1PB'> Alexandre - 9 pts</li>
+                            <li id='pontC' value='1PC'> Marcela - 6 pts</li>
+                            <li id='PontD' value='1PD'> Andreia - 5 pts</li>
+                            <li id='PontE' value='1PE'> Andre - 4 pts</li>
+                        </ol>
+                    </div>
+                </article>
+                <a href="index.html">
+                    <button class="yeloowQuizBack reset">REINICIAR</button>
+                </a>
+                <br><br>
+            </div>
         </div>
     </div>
+    <script src='js/main.js'></script>
 </body>
 </html>
