@@ -17,9 +17,11 @@ function load(){
     usuario.textContent = nome;
 }
 
+
 function erase(){
     window.localStorage.removeItem('userName');
 }
+
 
 let pontos = 0 // pontos para o placar
 let placar = 0 // placar
