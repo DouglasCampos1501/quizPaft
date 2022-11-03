@@ -18,28 +18,25 @@ function load(){
 }
 
 
+
 function erase(){
     window.localStorage.removeItem('userName');
 }
 
 
-let pontos = 0 // pontos para o placar
-let placar = 0 // placar
+let pontos = 0 
+let placar = 0 
 
-// PERGUNTA
 let numQuestao = document.querySelector('#numQuestao')
 let pergunta   = document.querySelector('#pergunta')
 let imagem = document.querySelector('#imgQuest')
 
-// ALTERNATIVAS
 let a = document.querySelector('#a')
 let b = document.querySelector('#b')
 let c = document.querySelector('#c')
 let d = document.querySelector('#d')
 
-// article com a class questoes
 let articleQuestoes = document.querySelector('.questoes')
-// ol li com as alternativas
 let alternativas = document.querySelector('#alternativas')
 
 const q0 = {
